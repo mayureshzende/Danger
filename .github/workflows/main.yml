@@ -11,18 +11,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm install
-      - name: Install dangerJS
-        run: npm test
-      - name: Test dangerJS
-        run: |
-          yarn init -y
-          yarn add danger --dev
+      - name: Test Danger
+        run: | 
           yarn install
-      - name: Danger
-        run: npx danger ci
+          yarn test
+          ls -a
+          npx danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
 
