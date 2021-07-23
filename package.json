@@ -1,0 +1,45 @@
+{
+  "name": "Testing-Jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --outputFile test-results.json --json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mayureshzende/Danjer-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/*.ts"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.20",
+    "@types/mustache": "^4.1.1",
+    "@vercel/ncc": "^0.27.0",
+    "babel-jest": "^26.6.3",
+    "danger": "^10.6.6",
+    "danger-plugin-code-coverage": "^1.1.6",
+    "danger-plugin-jest": "^1.3.0",
+    "eslint-config-prettier": "^8.1.0",
+    "jest": "^27.0.6",
+    "prettier": "2.2.1",
+    "typescript": "^4.2.3"
+  }
+}
