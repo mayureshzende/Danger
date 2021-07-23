@@ -3,7 +3,6 @@ import { danger, message, warn, fail } from "danger";
 import jest from "danger-plugin-jest";
 import { codeCoverage } from "danger-plugin-code-coverage";
 
-jest();
 codeCoverage([
   {
     title: "# Coverage",
@@ -22,6 +21,8 @@ codeCoverage([
     coverageFilesPath: "coverage/coverage-final.json",
   },
 ]);
+
+jest();
 
 // // Add a CHANGELOG entry for app changes
 // const hasChangelog = danger.git.modified_files.includes("changelog.md");
