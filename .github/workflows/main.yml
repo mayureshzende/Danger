@@ -18,7 +18,7 @@ jobs:
           yarn test
           ls -a
       - name: Danger ci
-        if: ${{ success() }}
+        if: ${{ always() }}
         run: |
           npx danger ci
         env:
