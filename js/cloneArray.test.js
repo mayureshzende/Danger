@@ -6,6 +6,6 @@ test("Properly clones the array ", () => {
   // but they are located at the different memory location
   // so we need to add the toEqual to have the same element matching
 
-  expect(cloneArray([2, 3, 4])).not.toBe([2, 3, 1]);
+  expect(cloneArray([2, 3, 4])).not.toBe([2, 3, 4]);
   expect(cloneArray([1, 2, 3])).toEqual([1, 2, 3]);
 });
