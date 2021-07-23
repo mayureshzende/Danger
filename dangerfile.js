@@ -3,24 +3,24 @@ import { danger, message, warn, fail } from "danger";
 import jest from "danger-plugin-jest";
 import { codeCoverage } from "danger-plugin-code-coverage";
 
-codeCoverage([
-  {
-    title: "# Coverage",
-    ignoreCoveragePattern: [
-      "dist",
-      "test",
-      "ignore",
-      ".spec.",
-      ".json",
-      "config",
-      "yml",
-      "yaml",
-      "dangerfile",
-      "eslintrc",
-    ],
-    coverageFilesPath: "coverage/coverage-final.json",
-  },
-]);
+// codeCoverage([
+//   {
+//     title: "# Coverage",
+//     ignoreCoveragePattern: [
+//       "dist",
+//       "test",
+//       "ignore",
+//       ".spec.",
+//       ".json",
+//       "config",
+//       "yml",
+//       "yaml",
+//       "dangerfile",
+//       "eslintrc",
+//     ],
+//     coverageFilesPath: "coverage/coverage-final.json",
+//   },
+// ]);
 
 jest();
 
