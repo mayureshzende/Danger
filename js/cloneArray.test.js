@@ -7,5 +7,5 @@ test("Properly clones the array ", () => {
   // so we need to add the toEqual to have the same element matching
 
   expect(cloneArray([2, 3, 4])).not.toBe([2, 3, 4]);
-  expect(cloneArray([1, 2, 3])).toEqual([1, 2, 4]);
+  expect(cloneArray([1, 2, 3])).toEqual([1, 2, 3]);
 });
