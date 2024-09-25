@@ -1,6 +1,5 @@
 name: CI Pull Requests
-on:
-  [pull_request]
+on: [pull_request]
 
 jobs:
   build:
@@ -11,13 +10,16 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Test Danger
-        run: | 
+      - name: install yarn
+        run: |
           yarn install
+      - name: Test Danger
+        run: |
           yarn test
           ls -a
+      - name: Danger ci
+        if: ${{ always() }}
+        run: |
           npx danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
